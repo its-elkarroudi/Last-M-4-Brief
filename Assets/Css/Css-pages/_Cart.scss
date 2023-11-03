@@ -138,13 +138,14 @@
     height: 100vh;
     background-color: var(--third-color);
     border-left: 10px solid var(--secondary-color);
+    overflow-y: scroll;
 }
 #payment.check-now {
     right: 0;
     transition-duration: 1s;
 }
 #payment form {
-    padding: 50px 100px;
+    padding: 20px 100px;
 }
 #payment .title {
     display: flex;
@@ -168,3 +169,38 @@
 #payment .content-information div select {margin-bottom: 10px; width: 49%;}
 #payment .content-information input {width: 100%;}
 #payment .delevery-details {margin: 20px 0;}
+
+
+#payment .thank-for-order {
+    margin: 50px 100px;
+}
+#payment button#checkout_btn_close {
+    margin: 20px 100px;
+}
+#payment .thank-for-order i{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+#payment .thank-for-order .thank-you {
+    color: white;
+    padding: 35px ;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+#payment .thank-for-order .order-details {
+    background-color: transparent;
+    border: 5px solid var(--secondary-color);
+    padding: 20px 30px;
+}
+
+#payment .order-details div {
+    border: 1px solid var(--secondary-color);
+    padding: 5px 10px;
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    margin: 10px 0;
+}
+#payment .order-details div span {font-weight: 700; font-size: 18px;}
+
+.hidden {display: none;}

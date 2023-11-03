@@ -38,9 +38,6 @@ const validate_payment_form = () => {
         full_name.classList.add('valid');
         errorMessage[0].innerText = '';
         is_payment_valid.full_name = true;
-
-        let full_name_value = full_name.value;
-        console.log(full_name_value);
     }
 
 
@@ -70,9 +67,10 @@ const validate_payment_form = () => {
     else {
         email_address.classList.remove('invalid');
         email_address.classList.add('valid');
-        errorMessage[1].innerText = '';
+        errorMessage[1].innerText = ""
         is_payment_valid.email_address = true;
     }
+
 
     if (region.value === '0') {
         region.classList.add('invalid');
@@ -123,6 +121,16 @@ validate_in_input(city);
 validate_in_input(full_address);
 
 
+
+const updateOrderSubtotal = () => {
+    const productSubtotal = document.querySelector('.product-sub-total');
+    const orderSubtotal = document.querySelector('.d-order-subtotal');
+    orderSubtotal.textContent = productSubtotal.textContent;
+};
+
+
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     validate_payment_form();
@@ -130,14 +138,42 @@ form.addEventListener('submit', (e) => {
     const allFieldsValid = Object.values(is_payment_valid).every((valid) => valid);
 
     if (allFieldsValid) {
-        form.submit();
+        // form.submit();
         form.remove();
 
-        thank_for_order.classList.remove('show');
+        // Accessing values
+        let full_name_value = full_name.value;
+        let phone_number_value = phone_number.value;
+        let email_address_value = email_address.value;
+        let region_value = region.value;
+        let city_value = city.value;
+        let full_address_value = full_address.value;
 
 
-    } else {
-        console.log("Input's are empty");
+
+
+        // Accessing thank-for-order elements
+        const currentDate = new Date();
+
+        let date_span = document.querySelector('.thank-for-order .d-order-date');
+        let full_name_span = document.querySelector('.thank-for-order .d-order-name');
+        let phone_number_span = document.querySelector('.thank-for-order .d-order-phone');
+        let email_address_span = document.querySelector('.thank-for-order .d-order-email');
+        let client_address = document.querySelector('.thank-for-order .d-order-address');
+        let payment_method = document.querySelector('.thank-for-order .d-payment-method');
+
+        // Updating total 
+        updateOrderSubtotal();
+
+        // Set the values in the thank-for-order section
+        date_span.textContent = `${currentDate.toDateString()}`;
+        full_name_span.textContent = `${full_name_value}`;
+        phone_number_span.textContent = `${phone_number_value}`;
+        email_address_span.textContent = `${email_address_value}`;
+        client_address.textContent = `${region_value}, ${city_value}, ${full_address_value}`;
+        payment_method.textContent = "Cash on Delivery";
+
+        thank_for_order.classList.remove('hidden');
     }
 })
 

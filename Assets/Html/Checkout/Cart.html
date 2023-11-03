@@ -95,7 +95,7 @@
                     <div class="summary-info">
                         <div class="d-flex">
                             <h2>Sub total :</h2>
-                            <span>599 dh</span>
+                            <span class="product-sub-total">599 dh</span>
                         </div>
     
                         <div class="d-flex">
@@ -182,10 +182,12 @@
         </div>
     </footer>
 
-    <section id="payment">
-        
+
+
+    <section id="payment" class="">
+        <button class="sp-btn" style="margin-bottom: 10px;" id="checkout_btn_close">Close</button>
         <form action="">
-            <button class="sp-btn" style="margin-bottom: 10px;" id="checkout_btn_close">Close</button>
+            
 
             <div class="client-details">
                 <div class="title">
@@ -214,18 +216,18 @@
                     <div class="d-flex">
                         <select name="Region">
                             <option value="0">Select Your Region</option>
-                            <option value="1">Tanger-Tétouan-Al Hoceïma</option>
-                            <option value="2">L'Oriental</option>
-                            <option value="3">Fès-Meknès</option>
-                            <option value="4">Rabat-Salé-Kénitra </option>
-                            <option value="5">Béni Mellal-Khénifra</option>
-                            <option value="6">Casablanca-Settat  </option>
-                            <option value="7">Marrakech-Safi</option>
-                            <option value="8">Drâa-Tafilalet</option>
-                            <option value="9">Souss-Massa</option>
-                            <option value="10"> Guelmim-Oued Noun</option>
-                            <option value="11">Laâyoune-Sakia El Hamra</option>
-                            <option value="12">Dakhla-Oued Ed-Dahab</option>
+                            <option value="Tanger-Tétouan-Al Hoceïma">Tanger-Tétouan-Al Hoceïma</option>
+                            <option value="L'Oriental">L'Oriental</option>
+                            <option value="Fès-Meknès">Fès-Meknès</option>
+                            <option value="Rabat-Salé-Kénitra">Rabat-Salé-Kénitra </option>
+                            <option value="Béni Mellal-Khénifra">Béni Mellal-Khénifra</option>
+                            <option value="Casablanca-Settat">Casablanca-Settat  </option>
+                            <option value="Marrakech-Safi">Marrakech-Safi</option>
+                            <option value="Drâa-Tafilalet">Drâa-Tafilalet</option>
+                            <option value="Souss-Massa">Souss-Massa</option>
+                            <option value="Guelmim-Oued Noun"> Guelmim-Oued Noun</option>
+                            <option value="Laâyoune-Sakia El Hamra">Laâyoune-Sakia El Hamra</option>
+                            <option value="Dakhla-Oued Ed-Dahab">Dakhla-Oued Ed-Dahab</option>
                         </select>
                         <input type="text" placeholder="City" minlength="8" name="city">
                     </div>
@@ -249,15 +251,66 @@
         </form>
 
 
-        <div class="thank-for-order">
+        <div class="thank-for-order hidden">
             
-            <div class="thank">
+            <div class="thank-you">
                 <i class="fa-solid fa-hands-bubbles fa-bounce"></i>
-                <h2>Good Work, You Order Has Been Confirmed !</h2>
+                <h2>Hello, You Order Has Been Confirmed !</h2>
+                <h4 style="margin-top: 5px;">you wil receive an email with order information</h4>
             </div>
 
-            <div class="client">
+            <div class="order-details">
+                <h1>Order details</h1>
 
+                <div>
+                    <span>Order Date :</span>
+                    <span class="d-order-date"></span>
+                </div>
+
+                <div>
+                    <span>Name :</span>
+                    <span class="d-order-name"></span>
+                </div>
+
+                <div>
+                    <span>Email :</span>
+                    <span class="d-order-email"></span>
+                </div>
+
+                <div>
+                    <span>Phone Number :</span>
+                    <span class="d-order-phone"></span>
+                </div>
+
+                <div>
+                    <span>Address :</span>
+                    <span class="d-order-address"></span>
+                </div>
+
+                <div>
+                    <span>payment method :</span>
+                    <span class="d-payment-method"></span>
+                </div>
+                <hr>
+
+
+
+                <div class="pricing">
+                    <div>
+                        <span>subtotal :</span>
+                        <span class="d-order-subtotal">69 dh</span>
+                    </div>
+
+                    <div>
+                        <span>taxes vat (0%) :</span>
+                        <span class="">0</span>
+                    </div>
+
+                    <div>
+                        <span>total :</span>
+                        <span class="d-total"></span>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -278,6 +331,8 @@
 
     <script src="../../Js/Code-Repeat.js"></script>
     <script src="../../Js/Payment-validate.js"></script>
+    
+    <script src="../../Js/Add-to-cart.js"></script>
 
     <script>
 

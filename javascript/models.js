@@ -218,7 +218,7 @@ newBookForm.addEventListener("submit", (event) =>{
     const author = document.getElementById("bookAuthor");
     const validationMsg = document.getElementById("validation");
     const disponibility = true;
-    const category = 'manga';
+    const category = document.getElementById("bookCategorySelect").value;
     
     if(addBook(isbn.value,title.value,desc.value,price.value,quantity.value,disponibility,author.value,category)){
         validationMsg.textContent="Book added successfully";
@@ -259,7 +259,7 @@ editBookBtn.addEventListener("click", () =>{
     const author = document.getElementById("bookAuthor2");
     const validationMsg = document.getElementById("validation2");
     const disponibility = false;
-    const category = 'motivation';
+    const category = document.getElementById("bookCategorySelect").value;
 
     modifyBook(isbn.value,title.value,desc.value,price.value,quantity.value,disponibility,author.value,category);
     validationMsg.textContent = "book modified successfully";
@@ -276,6 +276,18 @@ window.addEventListener("load",()=>{
             deleteBook(bookName);
         }
     });
+
+    
+    const selectCat = document.getElementById("bookCategorySelect");
+
+    categorys = bringData("categorys");
+    console.log(categorys);
+    categorys.forEach(category => {
+        const selectOption = document.createElement("option");
+        selectOption.value = category.categoryTitle;
+        selectOption.textContent = category.categoryTitle;
+        selectCat.appendChild(selectOption);
+    })
 });
 
 

@@ -1,0 +1,86 @@
+#checkout .container {
+    display: flex;
+    justify-content: space-between;
+}
+#checkout .container .client-information {
+    margin-top: 50px;
+    width: 100%;
+}
+#checkout .container .client-information .title,
+#checkout .container .delivery-information .title { 
+    display: flex; 
+    align-items: center;
+
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+}
+#checkout .container .client-information .title span,
+#checkout .container .delivery-information .title span {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 20px;
+}
+#checkout .container .client-information .content-information,
+.payment-information {
+    position: relative;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--third-color);
+    padding: 20px 20px;
+}
+
+
+#checkout .container .client-information .content-information form div input,
+#checkout .container .delivery-details .content-information form div input,
+#checkout .container .client-information .content-information form input,
+#checkout .container .delivery-details .content-information form input,
+#checkout .container .delivery-details .content-information select{
+    outline: 0;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    width: 48%;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: transparent;
+    font-weight: 700;
+}
+#checkout .container .client-information .content-information form div input::placeholder,
+#checkout .container .client-information .content-information form input::placeholder {
+    color: var(--secondary-color);
+}
+#checkout .container .client-information .content-information form input {width: 100%;}
+
+h3 {margin-top: 30px; color: var(--secondary-color);}
+
+.payment-details {margin-bottom: 50px;}
+#checkout .container .client-details,
+#checkout .container .delivery-details {margin-bottom: 30px;}
+
+
+
+
+@media (max-width: 700px) {
+    #checkout .container {flex-wrap: wrap;}
+    #checkout .container .client-information {width: 100%;}
+    #checkout .container .client-information .title,
+    #checkout .container .delivery-information .title {font-size: 15px;}
+
+    #checkout .container .client-information .content-information form div input,
+    #checkout .container .delivery-details .content-information form div input,
+    #checkout .container .client-information .content-information form input,
+    #checkout .container .delivery-details .content-information form input,
+    #checkout .container .delivery-details .content-information select {
+        padding: 0 8px;
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 18px;
+    }
+    #checkout .container .client-information .content-information form div {flex-wrap: wrap;}
+
+}

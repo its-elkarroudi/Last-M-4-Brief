@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/da6b47f324.js" crossorigin="anonymous"></script>
+
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="../Css/main.css">
+
+    <title>BookSea - Home</title>
+</head>
+<body id="productsBody">
+
+    <!-- START HEADER SECTION -->
+    <header>
+        <div class="head-1">
+            <div class="container">
+                <a href="../../Administration/Admin.html">Administration</a>
+            </div>
+        </div>
+
+        <div class="head-2">
+            <div class="container d-flex">
+
+                <div class="logo">
+                    <a href=""><img src="../Img/logo.png" alt="BookSea Logo"></a>
+                </div>
+
+                <div class="navbar d-flex">
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="Categories.html">Categories</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="Checkout/Cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                    <i class="fa-solid fa-bars active_Burger" id="Burger_Menu"></i>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END HEADER SECTION -->
+
+
+
+
+    <section id="products">
+        <div class="container">
+
+            <h1>Products <span> ( Find The Best Books )</span></h1>
+
+            <div class="product-filter">
+                
+                    <div class="category-div-list">
+                        <ul class="category-list" id="category-list">
+                            <li id="all" class="filter-item">All</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <form action="" class="d-flex">
+                            <input type="search" name="product_search" id="product_search" placeholder="Search By Title">
+                        </form>
+                    </div>
+    
+            </div>
+
+            <!-- PRODUCTS CONTAINER -->
+            <div class="products-container" id="productList">
+
+                <!-- DIV OF HOW PRODUCTS WILL BE DISPLAYED -->
+                <!-- <div class="product" >
+                    <img src="../../Administration/Assets/Img/Products/product-1.png" alt="product image" class="product_image_onclick">
+                    <div class="product-info d-flex">
+
+                        <div class="pr">
+                            <h3 class="product_title_onclick">Product Title 1</h3>
+                            <h5>Drama</h5>
+                        </div>
+
+                        <div class="price d-flex">
+                            <h5>180 Dh</h5>
+                            <button class="sp-btn-reverse">Add to cart</button>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <!-- WHERE OTHER PRODUCTS WILL BE displayed -->
+
+
+                <!-- what will be displayed if product no found  -->
+                <div id="noProductMessage"><h1>There Is No Products With This Name</h1></div>
+
+                <div id="noProductInCategory"><h1>There Is No Products In This Category</h1></div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="foot-1">
+            <div class="container d-flex">
+
+                <div class="footer-links">
+                    <a href="../../index.html">
+                        <img src="../Img/logo.png" alt="BookSea Logo">
+                    </a>
+
+                    <div class="links"> 
+                        <ul class="pages">
+                            <li>Pages</li>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="Categories.html">Categories</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+
+                        <ul class="support">
+                            <li>Support</li>
+                            <li><a href="">Help Center</a></li>
+                            <li><a href="">Faq</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subscribe">
+                    <h3>Subscribe</h3>
+                    <form action="" id="subscribeForm">
+                        <input type="text" placeholder="Email Address" name="Subscribe-Email">
+                        <button type="submit" class="sp-btn-reverse">Send</button>
+                    </form>
+                    <div class="errorMessage"></div>
+                    <p>By Subscribing You Agree To Our <a href="#"><u>Privacy Policy</u></a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="foot-2">
+            <div class="container">
+                <h4>All right reserved</h4>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <section id="product-information" class="">
+
+        <button class="close sp-btn product_information_close">close</button>
+
+        <div class="all-product-details">
+            <div class="product-image">]
+                <img src="../../Administration/Assets/Img/Products/product-1.png" alt="">
+            </div>
+    
+            <div class="product-info">
+                <h1>Product Title</h1>  
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero officiis eum culpa quas mollitia, at provident unde nisi, consequuntur dolorum illo rem optio maiores vel aliquam, ea adipisci aperiam incidunt expedita? Aut, molestiae nihil?</p>
+                <h1>1000 Dh <del>1500 Dh</del></h1>
+                <div class="d-flex">
+                    <input type="number" name="order_number"  value="1" min="1" max="20">
+                    <button class="sp-btn-reverse">Add to card</button>
+                </div>
+            
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="../../javascript/productsPage.js"></script>
+    <script src="../../javascript/"></script>
+    <script src="../Js/Code-Repeat.js"></script>
+    <script src="../Js/Product-Pop-Up.js"></script>
+    <script src="../Js/Products-Search.js"></script>
+    <script src="../Js/Products-filter.js"></script>
+   
+
+
+
+
+</body>
+</html>

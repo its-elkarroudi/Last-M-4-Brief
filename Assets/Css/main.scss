@@ -1,0 +1,20 @@
+// IMPORT DESIGN SYSTEM 
+@use '../Css/Css-pages/Design-System';
+
+// IMPORT CODE REPEAT CSS 
+@use '../Css/Css-pages/Code-repeat';
+
+// IMPORT INDEX CSS CODE 
+@use '../Css/Css-pages/Home';
+
+// IMPORT PRODUCTS PAGE CSS
+@use '../Css/Css-pages/Product';
+
+// IMPORT CATEGORIES PAGE CSS
+@use '../Css/Css-pages/Category';
+
+// IMPORT CART PAGE CSS
+@use '../Css/Css-pages/Cart';
+
+// IMPORT CHECKOUT PAGE CSS
+@use '../Css/Css-pages/checkout';

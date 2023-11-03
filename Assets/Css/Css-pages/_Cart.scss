@@ -1,0 +1,170 @@
+#cart {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+}
+#cart .container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+#cart .container .product-list {
+    // background-color: aquamarine;
+    margin-top: 50px;
+    width: 60%;
+}
+#cart .container .product-list .product {
+    margin-bottom: 20px;
+    background-color: var(--third-color);
+    border: 2px solid var(--secondary-color);
+    padding: 10px 20px;
+    min-height: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#cart .container .product-list .product img {height: 100px;}
+#cart .container .product-list .product .product-info {
+    margin-left: 30px;
+}
+#cart .container .product-list .product .product-info input {
+    margin-top: 10px;
+    height: 30px;
+    width: 80px;
+    border-color: var(--secondary-color);
+    border-right: 5px solid var(--secondary-color);
+    margin-right: 10px;
+}
+#cart .container .product-list .product  button {
+    background-color: var(--error-color);
+    color: #fff;
+    border-color: var(--secondary-color);
+}
+#cart .container .product-list .product .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#cart .container .product-list .product .product-info span {font-weight: 700;}
+
+
+
+
+.container .order-summary {
+    margin-top: 50px;
+    height: 65vh;
+    width: 30%;
+    background-color: var(--third-color);
+    border: 2px solid var(--secondary-color);
+    padding: 30px 20px;
+}
+.container .order-summary form {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .order-summary .summary-info div{
+    margin-bottom: 15px;
+}
+.container .order-summary  button {
+    background-color: var(--secondary-color);
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.container .order-summary  button.checkout {width: 100%; margin-top: 10px;}
+.container .order-summary span {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+.container .order-summary .promo {
+    padding: 0 20px;
+    height: 50px;
+    width: 100%;
+    background-color: var(--third-color);
+    border: 2px solid var(--secondary-color);
+    align-items: center;
+}
+.container .order-summary .promo button {
+    padding: 0 10px;
+}
+.container .order-summary .promo input {
+    height: 40px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    width: 70%;
+    color: var(--secondary-color);
+}
+.container .order-summary .promo input::placeholder {color: var(--secondary-color);}
+
+
+
+@media (max-width: 700px) {
+    #cart .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #cart .container .product-list {width: 100%;}
+    #cart .container .product-list .product {
+        display: flex;
+        // flex-direction: column;
+    }
+    
+
+
+
+
+    .container .order-summary {width: 100%;}
+    .container .order-summary {height: 58vh;}
+    .container .order-summary form {height: 45vh;}
+    .container .order-summary .summary-info div{ margin-bottom: 5px;}
+    .container .order-summary .promo {margin-top: 20px;}
+    .container .order-summary .promo input {width: 70%;}
+}   
+/*================================== */ 
+#payment {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 90vw;
+    height: 100vh;
+    background-color: var(--third-color);
+    border-left: 10px solid var(--secondary-color);
+}
+#payment.check-now {
+    right: 0;
+    transition-duration: 1s;
+}
+#payment form {
+    padding: 50px 100px;
+}
+#payment .title {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 8px 20px;
+    color: #fff;
+}
+#payment .title span {
+    background-color: #fff;
+    padding: 5px;
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin-right: 15px;
+}
+#payment .content-information {
+    padding: 10px ;
+    border: 4px solid var(--secondary-color);
+}
+#payment .content-information div input,
+#payment .content-information div select {margin-bottom: 10px; width: 49%;}
+#payment .content-information input {width: 100%;}
+#payment .delevery-details {margin: 20px 0;}

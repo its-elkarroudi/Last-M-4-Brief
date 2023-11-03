@@ -1,0 +1,95 @@
+body {
+  height: 100vh !important;
+  box-sizing: border-box !important;
+}
+
+section {
+  display: flex !important;
+  width: 90% !important;
+  margin: 50px auto !important;
+  flex-direction: column !important;
+}
+
+#contact-form {
+  display: flex !important ;
+  flex-direction: column !important;
+}
+
+#check {
+  display: flex !important;
+  align-items: center !important;
+}
+
+#chbx {
+  margin-right: 5px !important;
+  margin-top: 5px !important;
+}
+
+h1 {
+  font-size: larger !important;
+  font-weight: 900 !important;
+}
+
+p {
+  margin-bottom: 20px !important;
+}
+
+#Name {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+}
+#Name input {
+  width: 49% !important;
+}
+
+input,
+textarea {
+  color: #34495e !important ;
+  border-color: #34495e;
+  margin-bottom: 10px !important;
+}
+
+textarea {
+  height: 200px !important;
+}
+
+#subm {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+#subm a {
+  text-decoration: underline !important;
+}
+
+#subm button {
+  background-color: #34495e !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 5px 25px !important;
+  font-weight: 500 !important;
+}
+
+#submit:hover {
+  background-color: white !important;
+  color: #34495e !important;
+  border: 2px solid #34495e !important;
+}
+
+@media (max-width: 768px) {
+  #Name input {
+    width: 100% !important;
+  }
+}
+
+#parag {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+  background-color: red !important;
+  color: white !important;
+}
